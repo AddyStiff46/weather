@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather and Astronomy</title>
+</head>
+<body>
+    <div class="container">
+        <div class="current-info">
+            <div>
+                <img src="" alt="icon">
+            </div>
+            <div class="current-temp" id="current-temp">
+                2&#176; <span class="metric-imperial">F</span>
+            </div>
+            <div class="feels-like">
+                Feels like <span class="feels-temp" id="feels-temp">0&#176;</span>
+            </div>
+            <div class="total-precip">
+                30 <span id="in-cm">in</span>
+                <img src="" alt="rain">
+            </div>
+            <div class="date-container">
+                <div class="current-time" id="current-time">
+                    12:01 <span id="am-pm">Am</span>
+                </div>
+                <div class="current-location" id="current-location">
+                    Fairbanks, Ak
+                </div>
+                <div class="current-date">
+                    <div class="date" id="date">
+                        Monday, Oct 31
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="moon-data">
+        <div class="moon-phase">
+            <img src="" alt="moon-phase"><br>
+            Full Moon
+        </div>
+        <div class="moon-illumination">
+            <span class="illum" id="illum">100%</span> Illuminated
+        </div>
+        <div class="moon-rise">6 <span id="am-pm">Am</span></div>
+        <div class="moon-set">9 <span id="am-pm">Pm</span></div>
+    </div>
+    <footer>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
