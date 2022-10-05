@@ -136,6 +136,25 @@ body{
 }
 
 
+.search-box{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar{
+    background-color: #3C3C44;
+    color: #eee;
+    border-radius: 10px;
+    border: 1px white;
+    padding: 10px 15px;
+    
+}
+.search-image{
+    justify-self: baseline;
+}
+
+
 @media only screen and  (max-width:730px){
     
     .container{
