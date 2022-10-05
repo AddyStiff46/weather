@@ -8,6 +8,12 @@
     <title>Weather and Astronomy</title>
 </head>
 <body>
+    <div class="search-box">
+        <div class="search-bar">
+            <input type="text" placeholder="Location..." name="search" id="search">
+            <button class="enter"><img src="" alt="search-button"></button>
+        </div>
+    </div>
     <div class="container">
         <div class="current-info">
             <div>
@@ -24,20 +30,23 @@
                 <img src="" alt="rain">
             </div>
             <div class="date-container">
-                <div class="current-time" id="current-time">
-                    12:01 <span id="am-pm">Am</span>
+                <div class="time" id="time">
+                    12:01 <span id="am-pm">Am</span> 
+                    <!-- added js -->
                 </div>
-                <div class="current-location" id="current-location">
+                <div class="location" id="location">
                     Fairbanks, Ak
                 </div>
-                <div class="current-date">
+                <div class="date">
                     <div class="date" id="date">
                         Monday, Oct 31
+                        <!-- added js -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="moon-data">
         <div class="moon-phase">
@@ -49,6 +58,63 @@
         </div>
         <div class="moon-rise">6 <span id="am-pm">Am</span></div>
         <div class="moon-set">9 <span id="am-pm">Pm</span></div>
+    </div>
+
+    <div class="sun-data">
+        <div class="sunrise">6 <span id="am-pm">am</span>
+        <img src="" alt="sunrise"></div>
+        <div class="sunset">9 <span id="am-pm">pm</span>
+        <img src="" alt="sunset"></div>
+    </div>
+
+
+    <div class="future-forecast">
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Tue</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+                <div class="wind-speed">13 Mph</div>
+                <div class="precip"></div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Wed</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Thur</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Fri</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Sat</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Sun</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+            <div class="weather-foreact-item">
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="day">Mon</div>
+                <div class="temp">Lowest -- 20&#176; F</div>
+                <div class="temp">Highest -- 50&#176; F</div>
+            </div>
+        </div>
     </div>
     <footer>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
 
