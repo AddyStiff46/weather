@@ -6,7 +6,10 @@ const api = {
     key : 'e2f5160ea5f84ab9b3071113220510',
     base : 'http://api.weatherapi.com/v1'};
 const searchBox = document.querySelector('.search-box');
-const location = document.getElementById('location');
+const locationEl = document.getElementById('location');
+const country = document.getElementById('country');
+const city = document.getElementById('city');
+const codes = [];
 
 setInterval(() => {
     const time = new Date();
@@ -18,11 +21,9 @@ setInterval(() => {
     const day = time.getDay();
     const date = time.getDate();
 
-
     timeEl.innerHTML = (hrIn12 < 10? '0' + hrIn12 : hrIn12) + ':' + (min <10? '0' + min: min) + ' ' + `<span id="am-pm">${ampm}</span>`
     dateEl.innerHTML = days[day] + ', ' + date + ' ' + months[month];
     // timeEl.innerHTML = (hour < 10? '0' + hour : hour) + ':' + (min <10? '0' + min: min) + ' ' + `<span id="am-pm">${ampm}</span>`
-
 
 }, 1000);
 
@@ -32,7 +33,7 @@ setInterval(() => {
 searchBox.addEventListener('keypress', setQuery);
 function setQuery(evt) {
     if (evt.keyCode == 13) {
-        // getResults(searchBox.value);
+        getResults(searchBox.value);
         console.log(searchBox.value)
     }
 }
@@ -46,4 +47,7 @@ function getResults (query) {
 
 function displayResults(weather) {
     console.log(weather);
+    let city = document.querySelector('.locationEl.city');
+    city.innerHTML = `${weather.name}, ${weather.sys.country}`;
 }
+
