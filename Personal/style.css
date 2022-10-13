@@ -11,25 +11,7 @@ body{
 
     
 }
-.search-box{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    padding: 10px 0px;
-    /* padding: 2rem 0rem; */
-    margin: 50px 10px;
-    /* border-radius: 20px; */
-    /* background-color: rgba(14, 7, 88, 0.25); */
-    /* border: 1px solid white; */
-}
-.search{
-    border: 1px solid black;
-    border-radius: 100px;
-    color: rgba(242, 255, 153, 1);
-    padding: 5px 8px;
-    box-shadow: inset;
-}
+
 .container{
     background-color: rgba(14, 7, 88, 0.25);
     border: 1px solid white;
@@ -43,43 +25,89 @@ body{
     max-height: 200rem;
     border-radius: 20px;
     /* margin-left: 200px; */
-    /* margin: 0 25%; */
+    margin: 0 25%;
+    text-align: center;
 
 }
 .current-temp{
-    font-size: xx-large;
+    font-size: 100px;
 }
 .feels-like{
-    font-size: xx-large;
+    font-size: 65px;
 }
 .total-precip{
-    font-size: x-large;
+    font-size: 75px;
 }
 .date-container .time{
-    font-size: x-large;
+    font-size: 70px;
 }
-.date-container .date{
-    font-size: larger;
+.date-container .location{
+    font-size: 30px;
 }
 
 
 .moon-data{
-    /* background-color: bisque; */
+    background-color: rgba(14, 7, 100, 0.40);
     font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+    color: rgba(242, 255, 153, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3vh;
+    /* margin: 0 25%; */
+    /* border-radius: 25px; */
+    text-align: center;
+    /* border: 1px solid white; */
+    font-size: 75px;
 
 }
 
 
 
 
-/* .sun-data{
+.sun-data{
     background-color: grey;
 }
 
 
 
 
-.future-forecast{
+/* .future-forecast{
     background-color: lightgreen;
 } */
 
+@media only screen and (max-width: 768px){
+    .container{
+        background-color: rgba(14, 7, 88, 0.25);
+        border: 1px solid white;
+        color: rgba(242, 255, 153, 1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 5rem;
+        padding-top: 0%;
+        max-height: 200rem;
+        border-radius: 20px;
+        /* margin-left: 200px; */
+        /* margin: 0 25%; */
+        text-align: center;
+    }
+    .current-temp{
+        font-size: 75px;
+    }
+    .feels-like{
+        font-size: 40px;
+    }
+    .total-precip{
+        font-size: 50px;
+    }
+    .date-container .time{
+        font-size: 45px;
+    }
+    .date-container .location{
+        font-size: 30px;
+    }
+}
