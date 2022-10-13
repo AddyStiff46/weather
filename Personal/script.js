@@ -2,15 +2,12 @@ const timeEl = document.getElementById('time');
 const dateEl = document.getElementById('date');
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const locationEl = document.getElementById('location');
+const country = document.getElementById('country');
+const city = document.getElementById('city');
 const api = {
     key : 'e2f5160ea5f84ab9b3071113220510',
     base : 'http://api.weatherapi.com/v1'};
-const searchBox = document.querySelector('.search-box');
-// const locationEl = document.getElementById('location');
-const country = document.getElementById('country');
-const city = document.getElementById('city');
-const codes = [];
-
 
 setInterval(() => {
     const time = new Date();
@@ -29,9 +26,15 @@ setInterval(() => {
 
 // Base url:http://api.weatherapi.com/v1, required: apiKey, q: query parameter, days(for forecast): 1 -14
 
-
-async function getData(file) {
+function getWeatherData(weather){
+    navigator.geolocation.getCurrentPosition((success) => {
+        let {latitude, longitude} = success.coords
+        let location = latitude + ',' + longitude
     fetch(`${api.base}/forecast.json?key=${api.key}&q=${location}&days=7`)
-    .then(response => response.json())
-    .then(data => console.log(data))
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+    });
 }
+getWeatherData();
