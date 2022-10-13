@@ -4,9 +4,11 @@
 body{
     /* font-family: 'Dancing Script', cursive; */
     font-family: 'EB Garamond', serif;
-    background-image: url(jessezhou-Uvaz8IGJ_7w-unsplash.jpg);
+    background-image: url(https://images.unsplash.com/photo-1558486012-817176f84c6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1804&q=80);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+
     
 }
 .search-box{
@@ -17,9 +19,9 @@ body{
     padding: 10px 0px;
     /* padding: 2rem 0rem; */
     margin: 50px 10px;
-    border-radius: 20px;
-    background-color: rgba(14, 7, 88, 0.25);
-    border: 1px solid white;
+    /* border-radius: 20px; */
+    /* background-color: rgba(14, 7, 88, 0.25); */
+    /* border: 1px solid white; */
 }
 .search{
     border: 1px solid black;

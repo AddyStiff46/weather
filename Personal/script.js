@@ -6,10 +6,11 @@ const api = {
     key : 'e2f5160ea5f84ab9b3071113220510',
     base : 'http://api.weatherapi.com/v1'};
 const searchBox = document.querySelector('.search-box');
-const locationEl = document.getElementById('location');
+// const locationEl = document.getElementById('location');
 const country = document.getElementById('country');
 const city = document.getElementById('city');
 const codes = [];
+
 
 setInterval(() => {
     const time = new Date();
@@ -23,31 +24,14 @@ setInterval(() => {
 
     timeEl.innerHTML = (hrIn12 < 10? '0' + hrIn12 : hrIn12) + ':' + (min <10? '0' + min: min) + ' ' + `<span id="am-pm">${ampm}</span>`
     dateEl.innerHTML = days[day] + ', ' + date + ' ' + months[month];
-    // timeEl.innerHTML = (hour < 10? '0' + hour : hour) + ':' + (min <10? '0' + min: min) + ' ' + `<span id="am-pm">${ampm}</span>`
 
 }, 1000);
 
 // Base url:http://api.weatherapi.com/v1, required: apiKey, q: query parameter, days(for forecast): 1 -14
 
 
-searchBox.addEventListener('keypress', setQuery);
-function setQuery(evt) {
-    if (evt.keyCode == 13) {
-        getResults(searchBox.value);
-        console.log(searchBox.value)
-    }
+async function getData(file) {
+    fetch(`${api.base}/forecast.json?key=${api.key}&q=${location}&days=7`)
+    .then(response => response.json())
+    .then(data => console.log(data))
 }
-
-function getResults (query) {
-    fetch(`${api.base}/search.json?key=${api.key}&q=${query}`)
-    .then(weather => {
-        return weather.json();
-    }).then(displayResults);
-}
-
-function displayResults(weather) {
-    console.log(weather);
-    let city = document.querySelector('.locationEl.city');
-    city.innerHTML = `${weather.name}, ${weather.sys.country}`;
-}
-
