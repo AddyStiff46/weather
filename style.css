@@ -81,11 +81,20 @@ body{
 
 
 
-/* .future-forecast{
-    background-color: lightgreen;
-} */
+.future-forecast{
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.future-forecast .day{
+    font-weight: 1, 900;
+    padding-top: 15px;
+    align-self: flex-start;
+}
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 600px){
     .container{
         background-color: rgba(14, 7, 88, 0.25);
         /* border: 1px solid white; */
@@ -103,18 +112,30 @@ body{
         text-align: center;
     }
     .current-temp{
-        font-size: 75px;
+        font-size: 3em;
     }
     .feels-like{
-        font-size: 40px;
+        font-size: 2em;
     }
     .total-precip{
-        font-size: 50px;
+        font-size: 2em;
     }
     .date-container .time{
-        font-size: 45px;
+        font-size: 2em;
     }
     .date-container .location{
-        font-size: 30px;
+        font-size: 2em;
+    }
+    .moon-data{
+        font-size: 2em;
+    }
+    .sun-data{
+        font-size: 2em;
+        background-color: rgba(75, 75, 0, 0.40);
+        color: white;
+    }
+    .future-forecast{
+        font-size: 2em;
+
     }
 }
