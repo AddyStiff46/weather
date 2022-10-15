@@ -14,7 +14,7 @@ const sunrise = document.querySelector('.sunrise');
 let icon = document.getElementById('current-image');
 const api = {
     key : 'e2f5160ea5f84ab9b3071113220510',
-    base : 'http://api.weatherapi.com/v1'};
+    base : 'https://api.weatherapi.com/v1'};
 
 // Base url:http://api.weatherapi.com/v1, required: apiKey, q: query parameter, days(for forecast): 1 -14
 
